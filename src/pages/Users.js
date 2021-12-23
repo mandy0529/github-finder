@@ -1,7 +1,18 @@
 import React from 'react';
+import UserCard from '../components/UserCard';
+import {useGlobalContext} from '../context/AppContext';
 
 function Users() {
-  return <div>users</div>;
+  const {user} = useGlobalContext();
+  return (
+    <div>
+      {user && (
+        <>
+          <UserCard />
+        </>
+      )}
+    </div>
+  );
 }
 
 export default Users;

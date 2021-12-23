@@ -1,11 +1,12 @@
 import React from 'react';
-import {Navbar, Search} from '../components/index';
+import {Search} from '../components/index';
+import Users from './Users';
 
 function Home() {
   return (
     <>
-      <Navbar />
       <Search />
+      <Users />
     </>
   );
 }

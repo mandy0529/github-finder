@@ -1,13 +1,14 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import {Home, SingleUser, Users} from './pages';
+import {Navbar} from './components';
+import {Home, SingleUser} from './pages';
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/users/:id" element={<SingleUser />} />
+        <Route path="/:id" element={<SingleUser />} />
       </Routes>
     </BrowserRouter>
   );

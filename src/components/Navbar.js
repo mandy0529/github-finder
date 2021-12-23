@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <Wrapper>
       <img src={NAVBAR} alt="github-img" />
-      <h2>Github Finder</h2>
+      <h2>Hello World, Finder</h2>
     </Wrapper>
   );
 }
