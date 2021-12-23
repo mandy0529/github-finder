@@ -9,6 +9,7 @@ const AppProvider = ({children}) => {
   const [user, setUser] = useState('');
   const [error, setError] = useState({show: false, msg: ''});
   const [repo, setRepo] = useState('');
+  const [singleUser, setSingleUser] = useState('');
 
   const searchUser = async (user) => {
     setLoading(true);
@@ -32,12 +33,27 @@ const AppProvider = ({children}) => {
     }
   };
 
-  const fetchSingleUser = async (id) => {
+  const fetchSingleUserRepo = async (id) => {
+    setLoading(true);
     try {
       const {data} = await axios(`${API_ENDPOINT}/users/${id}/repos`);
       setRepo(data);
     } catch (error) {
       controlError(true, 'not found any user info');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchSingleUser = async (id) => {
+    setLoading(true);
+    try {
+      const {data} = await axios(`${API_ENDPOINT}/users/${id}`);
+      setSingleUser(data);
+    } catch (error) {
+      controlError(true, 'not found any user info');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -58,7 +74,9 @@ const AppProvider = ({children}) => {
         loading,
         error,
         handleClear,
+        fetchSingleUserRepo,
         fetchSingleUser,
+        singleUser,
         repo,
       }}
     >
