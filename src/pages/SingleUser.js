@@ -17,6 +17,7 @@ function SingleUser() {
     fetchSingleUser,
     singleUser: user,
     loading,
+    repo,
   } = useGlobalContext();
 
   const {
@@ -112,7 +113,7 @@ function SingleUser() {
           <FaStore />
         </div>
       </div>
-      <Repo />
+      <Repo repo={repo} />
     </SingleWrapper>
   );
 }

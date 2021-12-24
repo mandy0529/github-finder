@@ -12,6 +12,7 @@ const SingleWrapper = styled.div`
     border-radius: 10px;
     border: 2px solid tomato;
     font-size: 1.5rem;
+    letter-spacing: 0.1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
@@ -34,6 +35,7 @@ const SingleWrapper = styled.div`
   }
   .to-github {
     button {
+      letter-spacing: 0.1rem;
       margin: 2rem 1rem 2rem 0;
       cursor: pointer;
       padding: 0.7rem 1.5rem;
@@ -53,7 +55,7 @@ const SingleWrapper = styled.div`
     margin: 2rem auto;
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
     img {
       width: 400px;
       border-radius: 10px;
@@ -61,7 +63,7 @@ const SingleWrapper = styled.div`
   }
   .single__user-info {
     margin-left: 3rem;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   .user__list {
     margin-top: 3rem;
@@ -71,7 +73,7 @@ const SingleWrapper = styled.div`
     box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
-    border-radius: 10px;
+    border-radius: 5px;
     .user__list-each {
       padding: 0 2rem;
       &:not(:last-child) {
@@ -87,6 +89,7 @@ const SingleWrapper = styled.div`
   }
   .second {
     margin: 6rem auto 3rem auto;
+    max-width: 80vw;
     text-align: center;
     svg {
       font-size: 2.7rem;
