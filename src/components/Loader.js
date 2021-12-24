@@ -17,10 +17,6 @@ const Wrapper = styled.section`
   text-align: center;
   background: var(--main-black2);
 
-  img {
-    width: 100px;
-    height: 100px;
-  }
   .loader {
     border: 10px solid white;
     border-top: 10px solid black;

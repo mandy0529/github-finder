@@ -1,33 +1,33 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import axios from 'axios';
 import {API_ENDPOINT} from '../utils/api';
+import {minjiObject} from './minji';
 
 const AppContext = React.createContext();
 
 const AppProvider = ({children}) => {
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState('');
-  const [error, setError] = useState({show: false, msg: ''});
+  const [error, setError] = useState(false);
   const [repo, setRepo] = useState('');
   const [singleUser, setSingleUser] = useState('');
 
   const searchUser = async (user) => {
     setLoading(true);
+
     try {
-      if (user !== '') {
-        const {
-          data: {items},
-        } = await axios(`${API_ENDPOINT}/search/users?q=${user}`);
-        if (items) {
-          const userInfo = items.map((item) => {
-            const {login, id, avatar_url: avatar} = item;
-            return {login, avatar, id};
-          });
-          setUser(userInfo);
-        }
+      const {
+        data: {items},
+      } = await axios(`${API_ENDPOINT}/search/users?q=${user}`);
+      if (items) {
+        const userInfo = items.map((item) => {
+          const {login, id, avatar_url: avatar} = item;
+          return {login, avatar, id};
+        });
+        setUser(userInfo);
       }
     } catch {
-      controlError(true, 'There is no user that matched.');
+      throw new Error('there is not search data matched.');
     } finally {
       setLoading(false);
     }
@@ -39,7 +39,7 @@ const AppProvider = ({children}) => {
       const {data} = await axios(`${API_ENDPOINT}/users/${id}/repos`);
       setRepo(data);
     } catch (error) {
-      controlError(true, 'not found any user info');
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -51,19 +51,23 @@ const AppProvider = ({children}) => {
       const {data} = await axios(`${API_ENDPOINT}/users/${id}`);
       setSingleUser(data);
     } catch (error) {
-      controlError(true, 'not found any user info');
+      setError(true);
     } finally {
       setLoading(false);
     }
   };
 
   const handleClear = () => {
-    setUser('');
+    searchUser('mandy0529');
   };
 
-  const controlError = (show = false, msg = '') => {
-    setError({show, msg});
-  };
+  // const controlError = (show = false, msg = '') => {
+  //   setError({show, msg});
+  // };
+
+  useEffect(() => {
+    searchUser('mandy0529');
+  }, []);
 
   return (
     <AppContext.Provider
@@ -72,12 +76,12 @@ const AppProvider = ({children}) => {
         setUser,
         user,
         loading,
-        error,
         handleClear,
         fetchSingleUserRepo,
         fetchSingleUser,
         singleUser,
         repo,
+        error,
       }}
     >
       {children}

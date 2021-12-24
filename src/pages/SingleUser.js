@@ -33,7 +33,9 @@ function SingleUser() {
     type,
     login,
   } = user;
+  const newBlog = blog && blog.slice(4);
 
+  console.log(blog);
   useEffect(() => {
     fetchSingleUserRepo(id);
     fetchSingleUser(id);
@@ -64,7 +66,12 @@ function SingleUser() {
           >
             <button>Visit github website</button>
           </a>
-          <a target="_blank" rel="noreferrer" className="to-github" href={blog}>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="to-github"
+            href={`https://${newBlog}`}
+          >
             <button>Visit Blog</button>
           </a>
           <div className="user__list">

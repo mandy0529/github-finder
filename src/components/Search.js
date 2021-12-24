@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
-import {Error, Loader} from '.';
+import {Loader} from '.';
 import {useGlobalContext} from '../context/AppContext';
 import {Wrapper} from '../styles/search';
 
 function Search() {
   const [user, setUser] = useState('');
-  const {error, searchUser, loading} = useGlobalContext();
+  const {searchUser, loading} = useGlobalContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (user) {
       searchUser(user);
       setUser('');
@@ -22,11 +21,6 @@ function Search() {
 
   return (
     <Wrapper>
-      {error.show && (
-        <Error>
-          <p>{error.msg}</p>
-        </Error>
-      )}
       <form onSubmit={handleSubmit}>
         <input
           type="text"

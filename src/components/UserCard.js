@@ -1,10 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {Error} from '.';
 import {useGlobalContext} from '../context/AppContext';
 import CardUser from '../styles/userCard';
 
 function UserCard() {
   const {user, handleClear} = useGlobalContext();
+
+  if (user.length === Number(0)) {
+    return <Error />;
+  }
 
   return (
     <CardUser>

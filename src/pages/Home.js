@@ -1,12 +1,14 @@
 import React from 'react';
-import {Search} from '../components/index';
+import {Search, Error} from '../components/index';
+import {useGlobalContext} from '../context/AppContext';
 import Users from './Users';
 
 function Home() {
+  const {user} = useGlobalContext();
   return (
     <>
       <Search />
-      <Users />
+      {user ? <Users /> : <Error />}
     </>
   );
 }
