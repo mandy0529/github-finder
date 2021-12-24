@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const SingleWrapper = styled.div`
   margin: 7rem 0rem 2rem 5rem;
-
   h1 {
     font-weight: bold;
   }
@@ -15,7 +14,6 @@ const SingleWrapper = styled.div`
     font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-
     &:hover {
       background: tomato;
       color: white;
@@ -37,7 +35,6 @@ const SingleWrapper = styled.div`
   .to-github {
     button {
       margin: 2rem 1rem 2rem 0;
-
       cursor: pointer;
       padding: 0.7rem 1.5rem;
       border-radius: 10px;
@@ -56,6 +53,7 @@ const SingleWrapper = styled.div`
     margin: 2rem auto;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
     img {
       width: 400px;
       border-radius: 10px;
@@ -63,18 +61,20 @@ const SingleWrapper = styled.div`
   }
   .single__user-info {
     margin-left: 3rem;
+    border-radius: 10px;
   }
   .user__list {
     margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
     padding: 1rem 2rem 1rem 1rem;
     box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
     .user__list-each {
       padding: 0 2rem;
-      &:nth-child(1) {
+      &:not(:last-child) {
         border-right: 1px solid white;
       }
       div {
@@ -82,6 +82,83 @@ const SingleWrapper = styled.div`
       }
       h4 {
         font-weight: bold;
+      }
+    }
+  }
+  .second {
+    margin: 6rem auto 3rem auto;
+    text-align: center;
+    svg {
+      font-size: 2.7rem;
+      color: tomato;
+      margin: 0 2rem;
+    }
+    h4 {
+      font-size: 2rem;
+    }
+  }
+  .second-each {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 5rem 0rem 2rem 2rem;
+
+    .back-btn {
+      font-size: 0.8rem;
+      padding: 0.3rem 1rem;
+    }
+    .name {
+      font-size: 1.7rem;
+    }
+    .type {
+      font-size: 0.7rem;
+    }
+    .to-github {
+      button {
+        margin: 0.7rem 0.4rem 0.7rem 0;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+      }
+    }
+    .single__user {
+      flex-direction: column;
+      img {
+        width: 150px;
+        margin: 1rem auto 2rem auto;
+      }
+    }
+    .single__user-info {
+      margin-left: 0;
+    }
+    .user__list {
+      flex-direction: column;
+      justify-content: center;
+      width: 80vw;
+
+      .user__list-each {
+        &:not(:last-child) {
+          border-right: none;
+        }
+        margin-top: 0.4rem;
+
+        div {
+          font-size: 0.6rem;
+          margin-bottom: 0.3rem;
+        }
+        h4 {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .second {
+      margin: 0;
+    }
+    .second-each {
+      margin-top: 0.7rem;
+      div {
+        margin-bottom: 0.3rem;
       }
     }
   }

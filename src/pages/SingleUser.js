@@ -1,15 +1,20 @@
 import React, {useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
-import {Loader} from '../components';
+import {Loader, Repo} from '../components';
 import {useGlobalContext} from '../context/AppContext';
 import SingleWrapper from '../styles/singleUser';
+import {
+  BsFillPersonPlusFill,
+  BsPeopleFill,
+  FaStore,
+  BiGitRepoForked,
+} from '../utils/icons';
 
 function SingleUser() {
   const {id} = useParams();
   const {
     fetchSingleUserRepo,
     fetchSingleUser,
-    repo,
     singleUser: user,
     loading,
   } = useGlobalContext();
@@ -27,6 +32,7 @@ function SingleUser() {
     type,
     login,
   } = user;
+
   useEffect(() => {
     fetchSingleUserRepo(id);
     fetchSingleUser(id);
@@ -36,7 +42,6 @@ function SingleUser() {
     return <Loader />;
   }
 
-  console.log(user);
   return (
     <SingleWrapper>
       <Link to="/">
@@ -76,6 +81,38 @@ function SingleUser() {
           </div>
         </div>
       </div>
+      <div className="user__list second">
+        <div className="user__list-each second-each">
+          <div>
+            <div>Followers</div>
+            <h4>{followers}</h4>
+          </div>
+          <BsPeopleFill />
+        </div>
+        <div className="user__list-each second-each">
+          <div>
+            <div>Following</div>
+            <h4>{following}</h4>
+          </div>
+          <BsFillPersonPlusFill />
+        </div>
+
+        <div className="user__list-each second-each">
+          <div className="">
+            <div>Public Repos</div>
+            <h4>{public_repos}</h4>
+          </div>
+          <BiGitRepoForked />
+        </div>
+        <div className="user__list-each second-each">
+          <div className="">
+            <div>Public Gists</div>
+            <h4>{public_gists}</h4>
+          </div>
+          <FaStore />
+        </div>
+      </div>
+      <Repo />
     </SingleWrapper>
   );
 }
