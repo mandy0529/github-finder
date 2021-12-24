@@ -35,7 +35,6 @@ const SingleWrapper = styled.div`
   }
   .to-github {
     button {
-      letter-spacing: 0.1rem;
       margin: 2rem 1rem 2rem 0;
       cursor: pointer;
       padding: 0.7rem 1.5rem;
@@ -107,7 +106,7 @@ const SingleWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     margin: 5rem 0rem 2rem 2rem;
-
+    max-width: 100vw;
     .back-btn {
       font-size: 0.8rem;
       padding: 0.3rem 1rem;

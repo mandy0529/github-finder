@@ -78,6 +78,20 @@ const RepoWrapper = styled.div`
       font-size: 0.3rem;
       letter-spacing: 0.1rem;
     }
+    .repo-list__issue {
+      /* flex-direction: column; */
+
+      svg {
+        font-size: 0.8rem;
+        margin: 0 0.2rem;
+      }
+      div {
+        font-size: 0.7rem;
+        margin: 0.2rem auto;
+        padding: 0.2rem 0.7rem;
+        margin-left: 0.5rem;
+      }
+    }
   }
 `;
 

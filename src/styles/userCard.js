@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const CardUser = styled.div`
   text-align: center;
+  max-width: 100vw;
   .users {
     margin: 2rem 5rem;
     display: grid;
