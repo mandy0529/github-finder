@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import axios from 'axios';
 import {API_ENDPOINT} from '../utils/api';
-import {minjiObject} from './minji';
 
 const AppContext = React.createContext();
 
