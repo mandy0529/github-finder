@@ -37,6 +37,7 @@ function SingleUser() {
   useEffect(() => {
     fetchSingleUserRepo(id);
     fetchSingleUser(id);
+    // eslint-disable-next-line
   }, [id]);
 
   if (loading) {
