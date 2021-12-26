@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+ ## ️ 🌏  깃헙 유저 찾기 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 💡 아이디어 전략
 
-In the project directory, you can run:
+   ⇒  개발자라면 github 을 사용할 수 밖에 없기에 rest api 를 익히면서 나와 제일 친해야 하고, 죽을 때까지 붙어있어야 하는 github 을 컨텐츠로 미니멀한 single page app 을 구현하고 싶었습니다.
 
-### `npm start`
+### 🛠 이것들을 가지고 사용했어요!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+ <img alt="SASS" src="https://img.shields.io/badge/STYLEDCOMPONENTS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white"/>  
+  <img alt="rest-api" src="https://img.shields.io/badge/restapi%20-purple.svg?&style=for-the-badge&logo=restapi&logoColor=white"/> 
+ <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?&style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 데이터 구성
 
-### `npm run build`
+1. 컨셉 : 세상에 모든 github user 들을 찾아보자! 🌏
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. 페이지 구성 :  따로 구성 되어 있는 페이지 없이 홈에서 모든걸 다 볼 수 있게끔 심플함과 편리함을 위주로 구성하였습니다.
+    - user 를 search 할 수 있는 main home page 🏡
+    - search 해서 검색 결과가 있을 경우 볼 수 있는 usercard
+    - 각 usercard 를 눌렀을 때 보여지는 single user page
+    
+3. 기능 : 
+    - rest api 를 이용해서 내가 원하는 대로 데이터를 불러 올 수 있다.
+    - search query 에 따라 검색 결과를 얻어낼 수 있다.
