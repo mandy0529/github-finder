@@ -7,7 +7,7 @@
 
 ### 🛠 이것들을 가지고 사용했어요!
 
- <img alt="React" src="https://img.shields.io/badge/react%20-#65D0EE.svg?&style=for-the-badge&logo=react&logoColor=white"/>
+ <img alt="React" src="https://img.shields.io/badge/react%20-skyblue.svg?&style=for-the-badge&logo=react&logoColor=white"/>
  <img alt="SASS" src="https://img.shields.io/badge/STYLEDCOMPONENTS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white"/>  
   <img alt="rest-api" src="https://img.shields.io/badge/restapi%20-purple.svg?&style=for-the-badge&logo=restapi&logoColor=white"/> 
  <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?&style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
