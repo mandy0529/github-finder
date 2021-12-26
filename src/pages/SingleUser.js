@@ -39,7 +39,7 @@ function SingleUser() {
     fetchSingleUserRepo(id);
     fetchSingleUser(id);
     // eslint-disable-next-line
-  }, [id]);
+  }, []);
 
   if (loading) {
     return <Loader />;
