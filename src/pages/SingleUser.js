@@ -35,7 +35,6 @@ function SingleUser() {
   } = user;
   const newBlog = blog && blog.slice(4);
 
-  console.log(blog);
   useEffect(() => {
     fetchSingleUserRepo(id);
     fetchSingleUser(id);
@@ -74,20 +73,22 @@ function SingleUser() {
           >
             <button>Visit Blog</button>
           </a>
-          <div className="user__list">
-            {location && (
-              <div className="user__list-each">
-                <div>Location</div>
-                <h4>{location}</h4>
-              </div>
-            )}
-            {company && (
-              <div className="user__list-each">
-                <div>Company</div>
-                <h4>{company}</h4>
-              </div>
-            )}
-          </div>
+          {location && company && (
+            <div className="user__list">
+              {location && (
+                <div className="user__list-each">
+                  <div>Location</div>
+                  <h4>{location}</h4>
+                </div>
+              )}
+              {company && (
+                <div className="user__list-each">
+                  <div>Company</div>
+                  <h4>{company}</h4>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
       <div className="user__list second">

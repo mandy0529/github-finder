@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 const RepoWrapper = styled.div`
-  max-width: 80vw;
-  padding: 5rem 4rem;
-  margin: 6rem auto 3rem auto;
-  border-radius: 5px;
-  box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
+  .repo-wrapper {
+    max-width: 80vw;
+    padding: 5rem 4rem;
+    margin: 6rem auto 3rem auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.75);
+  }
+
   .repo-list {
     padding: 2rem;
     margin: 2rem 0rem;
@@ -56,9 +59,11 @@ const RepoWrapper = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    padding: 2rem 1rem;
-    margin: 6rem auto 2rem auto;
-    max-width: 100vw;
+    .repo-wrapper {
+      padding: 2rem 1rem;
+      margin: 6rem auto 2rem auto;
+      max-width: 100vw;
+    }
     .repo-list {
       padding: 1rem;
       margin: 1rem 0rem;
@@ -79,8 +84,6 @@ const RepoWrapper = styled.div`
       letter-spacing: 0.1rem;
     }
     .repo-list__issue {
-      /* flex-direction: column; */
-
       svg {
         font-size: 0.8rem;
         margin: 0 0.2rem;

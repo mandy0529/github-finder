@@ -105,9 +105,11 @@ const SingleWrapper = styled.div`
     align-items: center;
   }
   @media screen and (max-width: 768px) {
-    margin: 5rem 0rem 2rem 2rem;
+    margin: 5rem 0rem 2rem 0rem;
     max-width: 100vw;
+
     .back-btn {
+      margin-left: 2rem;
       font-size: 0.8rem;
       padding: 0.3rem 1rem;
     }
@@ -126,6 +128,7 @@ const SingleWrapper = styled.div`
     }
     .single__user {
       flex-direction: column;
+      margin-left: 2rem;
       img {
         width: 150px;
         margin: 1rem auto 2rem auto;
@@ -138,7 +141,7 @@ const SingleWrapper = styled.div`
       flex-direction: column;
       justify-content: center;
       width: 80vw;
-
+      padding: 1rem 2rem 0rem 1rem;
       .user__list-each {
         &:not(:last-child) {
           border-right: none;
@@ -156,6 +159,7 @@ const SingleWrapper = styled.div`
     }
     .second {
       margin: 0;
+      margin-left: 2rem;
     }
     .second-each {
       margin-top: 0.7rem;
