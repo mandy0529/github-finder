@@ -62,7 +62,7 @@ const CardUser = styled.div`
   }
   @media screen and (max-width: 768px) {
     .users {
-      margin: 0;
+      margin: 2rem 0;
       grid-template-columns: auto;
     }
     img {
