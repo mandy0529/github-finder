@@ -21,7 +21,7 @@ function UserCard() {
           user.map((item) => {
             const {avatar, login, id} = item;
             return (
-              <Link to={`/${login}`} key={id} className="user__list">
+              <Link to={`/user/${login}`} key={id} className="user__list">
                 <img src={avatar} alt={login} />
                 <div className="user__list-info">
                   <div>{login}</div>
